@@ -34,10 +34,10 @@ sleep 3;clear
 rm /usr/bin/maxis
 cat> /usr/bin/maxis << END
 #!/bin/bash
-screen -dmS tls ohpserver -port 9087 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:443
-screen -dmS non ohpserver -port 9088 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:1194
-screen -dmS openssh ohpserver -port 9085 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:22
-screen -dmS dropbear ohpserver -port 9086 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:109
+screen -dmS tls ohpserver -port 9087 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:443
+screen -dmS non ohpserver -port 9088 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:1194
+screen -dmS openssh ohpserver -port 9085 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:22
+screen -dmS dropbear ohpserver -port 9086 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:109
 END
 chmod +x /usr/bin/maxis
 else
@@ -45,10 +45,10 @@ echo -e "adding maxis for ohpserver"
 sleep 3;clear
 cat> /usr/bin/maxis << END
 #!/bin/bash
-screen -dmS tls ohpserver -port 9087 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:443
-screen -dmS non ohpserver -port 9088 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:1194
-screen -dmS openssh ohpserver -port 9085 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:22
-screen -dmS dropbear ohpserver -port 9086 -proxy 127.0.0.1:9999 -tunnel 127.0.0.1:109
+screen -dmS tls ohpserver -port 9087 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:443
+screen -dmS non ohpserver -port 9088 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:1194
+screen -dmS openssh ohpserver -port 9085 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:22
+screen -dmS dropbear ohpserver -port 9086 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:109
 END
 chmod +x /usr/bin/maxis
 fi
